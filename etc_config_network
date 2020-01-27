@@ -1,0 +1,36 @@
+config match
+	option networkid 'set:bios'
+	option match '60,PXEClient:Arch:00000'
+
+config match
+	option networkid 'set:efi64'
+	option match '60,PXEClient:Arch:00009'
+
+config match
+	option networkid 'set:efi64'
+	option match '60,PXEClient:Arch:00007'
+
+config match
+	option networkid 'set:efi32'
+	option match '60,PXEClient:Arch:00006'
+
+config boot
+	option filename 'tag:bios,pxelinux.0'
+	option serveraddress '10.10.10.1'
+	option servername 'router'
+	list dhcp_option 'tag:bios,209,bios.cfg'
+	option force '1'
+
+config boot
+	option filename 'tag:efi64,bootx64.efi'
+	option serveraddress '10.10.10.1'
+	option servername 'router'
+	list dhcp_option 'tag:efi64,209,efi64.cfg'
+	option force '1'
+
+config boot
+	option filename 'tag:efi32,bootia32.efi'
+	option serveraddress '10.10.10.1'
+	option servername 'router'
+	list dhcp_option 'tag:efi32,209,efi32.cfg'
+	option force '1'
