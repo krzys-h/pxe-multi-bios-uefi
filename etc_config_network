@@ -15,7 +15,7 @@ config match
 	option match '60,PXEClient:Arch:00006'
 
 config boot
-	option filename 'tag:bios,pxelinux.0'
+	option filename 'tag:bios,lpxelinux.0'
 	option serveraddress '10.10.10.1'
 	option servername 'router'
 	list dhcp_option 'tag:bios,209,bios.cfg'

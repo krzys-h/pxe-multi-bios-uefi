@@ -6,7 +6,7 @@ mkdir -p tftp/{bios,efi32,efi64}
 wget https://mirrors.edge.kernel.org/pub/linux/utils/boot/syslinux/$VERSION.tar.gz
 tar xzf $VERSION.tar.gz
 
-cp $VERSION/bios/core/pxelinux.0 tftp/
+cp $VERSION/bios/core/lpxelinux.0 tftp/
 cp $VERSION/bios/com32/elflink/ldlinux/ldlinux.c32 tftp/
 cp $VERSION/efi32/com32/elflink/ldlinux/ldlinux.e32 tftp/
 cp $VERSION/efi64/com32/elflink/ldlinux/ldlinux.e64 tftp/
