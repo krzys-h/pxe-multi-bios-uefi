@@ -1,0 +1,4 @@
+tftp/boot/grub/fonts
+tftp/boot/grub/i386-efi
+tftp/boot/grub/i386-pc
+tftp/boot/grub/x86_64-efi
